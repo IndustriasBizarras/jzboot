@@ -6,7 +6,6 @@ ifneq (${READLINE},0)
 	CPPFLAGS += -DWITH_READLINE
 endif
 
-CC      = gcc
 TARGET  = ../jzboot
 SOURCES = debug.c devmgr.c ingenic.c main.c shell_lex.c usbdev.c shell.c shell_builtins.c config.c spl_cmdset.c usbboot_cmdset.c elfldr.c
 CFLAGS  = --std=gnu99 -Wall -I../include -O2 $(shell pkg-config libusb-1.0 --cflags)
